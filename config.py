@@ -1,5 +1,5 @@
 # the api key associated to your account to use
-API_KEY = "AIzaSyCm04AfOpqsFKs4KJ-nIQLUIl_DvTD17fU"
+API_KEY = "YOUR API KEY"
 
 
 #  to extract the data about a channel by user name
