@@ -9,7 +9,11 @@ def dumpData(file_name, data):
 	try:
 		file = open(file_name, 'w')
 		# convert to a dictionary then write it into the file.
+<<<<<<< HEAD
 		json.dump(data, file)
+=======
+		json.dump(json.loads(data), file)
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 		file.close()
 		
 	except Exception as e:

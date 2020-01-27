@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import items.channel as channel
 import items.video as video
 import managedata as md
@@ -6,6 +7,15 @@ import urllib.request
 import json
 
 
+=======
+import Yfetch.items.channel as channel
+import Yfetch.items.video as video
+import Yfetch.managedata as md
+import Yfetch.config as config
+import urllib.request
+import json
+
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 def makeVideo(video_id):
     '''
     to initialise the file that is named after the video id, extracting the data
@@ -22,7 +32,11 @@ def makeVideo(video_id):
 
         return True
 
+<<<<<<< HEAD
     except :
+=======
+    except:
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
         return False
 
 
@@ -46,7 +60,12 @@ def makeChannel(is_id, channel_id):
         data = channel.getChannelForUserName(channel_id)
         channel_id = json.loads(data)['items'][0]['id']
 
+<<<<<<< HEAD
     # create the id file for the channel.
+=======
+
+	#create the id file for the channel.
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
     md.dumpData(config.CHANNEL_PATH + channel_id + '.json', data)
 
     return channel_id
@@ -70,10 +89,17 @@ def extractChannelId(channel_link):
 	link = https://www.youtube.com/user/chemssouvideo
 	owner_id = chemssouvideo
 
+<<<<<<< HEAD
 	link = https://www.youtube.com/channel/UCnoN3upJZ1DPFgX9Y0CA8SA
 	channel_id = UCnoN3upJZ1DPFgX9Y0CA8SA
 
 	:param channel_link:
+=======
+    link = https://www.youtube.com/channel/UCnoN3upJZ1DPFgX9Y0CA8SA
+    channel_id = UCnoN3upJZ1DPFgX9Y0CA8SA
+
+    :param channel_link:
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 	:return channel_id | owner_id:
 	'''
 	try:
@@ -90,7 +116,10 @@ def extractChannelId(channel_link):
 	except Exception as e:
 		pass
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 def extractVideoId(video_link):
 	'''
 	this function is used for extracting the video id from a youtube video_link
@@ -118,11 +147,19 @@ def getChannelImg(channel_id):
 	link = channel.channelBasicData(channel_id)['pic']
 
 	# create the image file. 
+<<<<<<< HEAD
 	open(config.DATA_PATH + '/data' + channel_id + '_' +'pic.jpg', 'w').close()
+=======
+	open(config.DATA_PATH + '/data' +channel_id + '_' +'pic.jpg', 'w').close()
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 
 
 	try:
 		# download the file a store ir into the created file.
+<<<<<<< HEAD
 		urllib.request.urlretrieve(link, config.DATA_PATH + '/' + channel_id + '/' + 'pic.jpg')
+=======
+		urllib.request.urlretrieve(link, config.DATA_PATH + '/' +channel_id + '/' +'pic.jpg')
+>>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 	except Exception as e:
 		raise e
