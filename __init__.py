@@ -25,5 +25,5 @@ if __name__ == '__main__':
     print('\n\n** test the load of the data from the files **')
 
     # test the load of the data from the files
-    print(video.videoAllData(video_id)) # load the video data
+    print(video.videoAllData(video_id))  # load the video data
     print(channel.channelAllData(channel_id))  # channel the video data

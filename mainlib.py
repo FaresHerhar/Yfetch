@@ -5,6 +5,7 @@ import config as config
 import urllib.request
 import json
 
+
 def makeVideo(video_id):
     '''
     to initialise the file that is named after the video id, extracting the data
@@ -21,7 +22,7 @@ def makeVideo(video_id):
 
         return True
 
-    except:
+    except :
         return False
 
 
@@ -45,8 +46,7 @@ def makeChannel(is_id, channel_id):
         data = channel.getChannelForUserName(channel_id)
         channel_id = json.loads(data)['items'][0]['id']
 
-
-	#create the id file for the channel.
+    # create the id file for the channel.
     md.dumpData(config.CHANNEL_PATH + channel_id + '.json', data)
 
     return channel_id
@@ -70,10 +70,10 @@ def extractChannelId(channel_link):
 	link = https://www.youtube.com/user/chemssouvideo
 	owner_id = chemssouvideo
 
-    link = https://www.youtube.com/channel/UCnoN3upJZ1DPFgX9Y0CA8SA
-    channel_id = UCnoN3upJZ1DPFgX9Y0CA8SA
+	link = https://www.youtube.com/channel/UCnoN3upJZ1DPFgX9Y0CA8SA
+	channel_id = UCnoN3upJZ1DPFgX9Y0CA8SA
 
-    :param channel_link:
+	:param channel_link:
 	:return channel_id | owner_id:
 	'''
 	try:
@@ -89,6 +89,7 @@ def extractChannelId(channel_link):
 	# in case an empty line.
 	except Exception as e:
 		pass
+
 
 def extractVideoId(video_link):
 	'''
@@ -117,11 +118,11 @@ def getChannelImg(channel_id):
 	link = channel.channelBasicData(channel_id)['pic']
 
 	# create the image file. 
-	open(config.DATA_PATH + '/data' +channel_id + '_' +'pic.jpg', 'w').close()
+	open(config.DATA_PATH + '/data' + channel_id + '_' +'pic.jpg', 'w').close()
 
 
 	try:
 		# download the file a store ir into the created file.
-		urllib.request.urlretrieve(link, config.DATA_PATH + '/' +channel_id + '/' +'pic.jpg')
+		urllib.request.urlretrieve(link, config.DATA_PATH + '/' + channel_id + '/' + 'pic.jpg')
 	except Exception as e:
 		raise e
