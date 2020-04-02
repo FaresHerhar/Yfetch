@@ -2,18 +2,14 @@ import json
 
 
 def dumpData(file_name, data):
-	'''
+	"""
 	to write the data into a json file, data is a string as an input
 	abd gets wriiten into the file as a dictionary python object.
-	'''
+	"""
 	try:
 		file = open(file_name, 'w')
 		# convert to a dictionary then write it into the file.
-<<<<<<< HEAD
 		json.dump(data, file)
-=======
-		json.dump(json.loads(data), file)
->>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 		file.close()
 		
 	except Exception as e:
@@ -21,10 +17,10 @@ def dumpData(file_name, data):
 
 
 def loadData(file_name):
-	'''
+	"""
 	to load the data a json file, the returned object is as a dictionary,
 	object, the mode is only read.
-	'''
+	"""
 	try:
 		file = open(file_name, "r")
 		data = json.load(file)

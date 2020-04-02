@@ -46,11 +46,3 @@ snippet :: like an id card of a video.
 statistics :: as a crominal records, but for a video.
 status :: status, nothing more to say.
 player :: the embedded code.
-
-
-
-bonjour monsieur,
-je suis de HPC MS1, je veux juste savoir, es que on a cours et TP pour ce samedi.
-si non, dites-nous quelle journee on doit récupérer, ou bien si il faut changer le jour.
-
-Merci.  

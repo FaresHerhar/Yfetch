@@ -1,9 +1,5 @@
 # the api key associated to your account to use
-<<<<<<< HEAD
-API_KEY = "AIzaSyCm04AfOpqsFKs4KJ-nIQLUIl_DvTD17fU"
-=======
 API_KEY = "YOUR API KEY"
->>>>>>> e802eb5c26bad80aef0086b007cf54a9252bcbe8
 
 
 #  to extract the data about a channel by user name
@@ -29,13 +25,13 @@ channelId={}&maxResults=11&order=viewCount&fields=items%2Fid%2FvideoId&key={}"
 
 
 # the path where the data is stored in, every thing
-DATA_PATH = '/home/fares/youtubeData'
+DATA_PATH = '/home/fares/youtubeData/'
 
 # the path where the videos data
-VIDEO_PATH = '/home/fares/youtubeData/video/'
+VIDEO_PATH = DATA_PATH + 'video/'
 
 # the path where the channel data
-CHANNEL_PATH = '/home/fares/youtubeData/channel/'
+CHANNEL_PATH = DATA_PATH + 'channel/'
 
 # to create an xml file, that contains the data summary
 XML_PROTOTYPE = "<?xml version=\"1.0\"?>\n\
