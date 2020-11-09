@@ -13,7 +13,7 @@ def getVideoById(video_id):
             *	statistics.
             * 	basic data(name, id, ....)
     """
-    URL = Video_DATA_ID.format(video_id, API_KEY)
+    URL = VIDEO_DATA_ID.format(video_id, API_KEY)
     html = requests.get(URL)
 
     return html.text

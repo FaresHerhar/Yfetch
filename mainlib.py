@@ -1,9 +1,10 @@
-import items.channel as channel
-import items.video as video
-import managedata as md
-import config as config
 import urllib.request
 import json
+
+import items.channel as channel
+import items.video as video
+import config as config
+import managedata as md
 
 
 def makeVideo(video_id):
